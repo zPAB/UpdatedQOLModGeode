@@ -57,3 +57,16 @@ jobs:
         with:
           name: JPMenu-Output
           path: ${{ steps.build.outputs.build-output }}
+
+      - name: Publish to GitHub Release
+        uses: softprops/action-gh-release@v2
+        if: github.ref == 'refs/heads/main'
+        with:
+          tag_name: v1.0.0
+          name: "JPMenu v1.0.0"
+          draft: false
+          prerelease: false
+          files: ${{ steps.build.outputs.build-output }}/*.geode
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
