@@ -1,7 +1,7 @@
 # v1.0.0
 
-- Lanzamiento oficial de JPMenu v1.0.0 para Geometry Dash 2.2091 y Geode v6.
-- Logotipo estilizado y nueva identidad visual independiente.
-- Solucionado el error de carga de librerías dinámicas en Android (`dlopen LevelEditorLayer`).
-- Rendimiento ultra fluido en PC y Android.
-- Más de 70 funciones y módulos activos.
+- Lanzamiento oficial de JPMenu v1.0.0 por zPAB.
+- ¡NUEVO!: Death Markers (Marcadores visuales en el nivel de los puntos exactos de muerte).
+- ¡NUEVO!: CPS Counter en tiempo real en pantalla para clics y toques táctiles.
+- Solución definitiva para Android al cargar librerías dinámicas (`dlopen LevelEditorLayer & PlayLayer`).
+- Nueva identidad visual, logotipo neón y rendimiento optimizado para PC y móviles.

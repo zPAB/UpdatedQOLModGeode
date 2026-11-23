@@ -29,6 +29,9 @@ class $modify (PlayLayerUtils, PlayLayer)
     float getCurrentPercentageAdv();
     int getDecimalsToShow();
 
+    virtual void circleWaveWillBeRemoved(CCCircleWave*) {}
+    virtual void dialogClosed(DialogLayer*) {}
+
     // hooks
 
     bool init(GJGameLevel* level, bool dontCreateObjects);

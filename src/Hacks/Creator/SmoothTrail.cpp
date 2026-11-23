@@ -28,4 +28,6 @@ class $modify (LevelEditorLayer)
     }
 
     virtual void levelSettingsUpdated() {}
+    virtual void circleWaveWillBeRemoved(CCCircleWave*) {}
+    virtual void dialogClosed(DialogLayer*) {}
 };
