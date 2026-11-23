@@ -31,6 +31,8 @@ class $modify (PlayLayerUtils, PlayLayer)
 
     virtual void circleWaveWillBeRemoved(CCCircleWave*) {}
     virtual void dialogClosed(DialogLayer*) {}
+    virtual void currencyWillExit(CurrencyRewardLayer*) {}
+    virtual void googlePlaySignedIn() {}
 
     // hooks
 
