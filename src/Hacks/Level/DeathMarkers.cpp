@@ -49,7 +49,7 @@ class $modify (DeathMarkerPlayLayer, PlayLayer)
             CCPoint pos = player->getPosition();
             m_fields->deathPoints.push_back(pos);
             m_fields->drawNode->drawDot(pos, 6.0f, ccc4f(1.0f, 0.2f, 0.2f, 0.85f));
-            m_fields->drawNode->drawCircle(pos, 10.0f, ccc4f(1.0f, 0.8f, 0.2f, 0.9f), 1.5f, 16);
+            m_fields->drawNode->drawCircle(pos, 10.0f, ccc4f(0.0f, 0.0f, 0.0f, 0.0f), 1.5f, ccc4f(1.0f, 0.8f, 0.2f, 0.9f), 16);
         }
 
         PlayLayer::destroyPlayer(player, object);
