@@ -26,4 +26,6 @@ class $modify (LevelEditorLayer)
 
         LevelEditorLayer::postUpdate(dt);
     }
+
+    virtual void levelSettingsUpdated() {}
 };

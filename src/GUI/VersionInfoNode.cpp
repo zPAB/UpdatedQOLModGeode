@@ -60,11 +60,11 @@ void VersionInfoNode::updateLabel()
         case VersionInfoType::QOLMod:
             if (isUpdateAvailable())
             {
-                label->setString(fmt::format("{}  |  QOLMod {}", LocalisationManager::get()->getLocalisedString("ui/update-available"), Mod::get()->getVersion().toVString()).c_str());
+                label->setString(fmt::format("{}  |  JPMenu {}", LocalisationManager::get()->getLocalisedString("ui/update-available"), Mod::get()->getVersion().toVString()).c_str());
             }
             else
             {
-                label->setString(fmt::format("QOLMod {}", Mod::get()->getVersion().toVString()).c_str());
+                label->setString(fmt::format("JPMenu {}", Mod::get()->getVersion().toVString()).c_str());
             }
 
             break;

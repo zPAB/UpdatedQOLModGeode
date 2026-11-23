@@ -22,6 +22,7 @@ class $modify (HitboxBaseGameLayer, GJBaseGameLayer)
 class $modify (HitboxEditorLayer, LevelEditorLayer)
 {
     void onPlaytest();
+    virtual void levelSettingsUpdated() {}
 };
 
 class $modify (HitboxEditorUI, EditorUI)

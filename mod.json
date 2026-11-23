@@ -8,13 +8,12 @@
 		"ios": "2.2091"
 	},
 	"early-load": true,
-	"id": "zpab.updated_qolmod",
-	"name": "QOLMod (v6 Port)",
-	"developer": "TheSillyDoggo, zPAB",
-	"description": "Unofficial port of TheSillyDoggo's QOLMod updated for Geode v6 and Geometry Dash 2.2091.",
+	"id": "zpab.jpmenu",
+	"name": "JPMenu",
+	"developer": "zPAB",
+	"description": "El mejor mod menú de calidad de vida y utilidades para Geometry Dash (PC y Android).",
 	"links": {
-		"source": "https://github.com/zPAB/UpdatedQOLModGeode",
-		"community": "https://github.com/TheSillyDoggo/GeodeMenu"
+		"source": "https://github.com/zPAB/UpdatedQOLModGeode"
 	},
 	"resources": {
         "files": [

@@ -55,4 +55,6 @@ class $modify (NoclipEditorLayer, LevelEditorLayer)
     virtual void playerTookDamage(PlayerObject* player);
 
     virtual void postUpdate(float dt);
+
+    virtual void levelSettingsUpdated() {}
 };

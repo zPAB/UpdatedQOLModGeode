@@ -1,22 +1,26 @@
-# QOLMod (v6 Port)
+# JPMenu - Geometry Dash Mod Menu
 
-Unofficial maintenance port of [TheSillyDoggo/GeodeMenu](https://github.com/TheSillyDoggo/GeodeMenu) for **Geometry Dash 2.2091** and **Geode v6**.
+<p align="center">
+  <img src="logo.png" width="180" alt="JPMenu Logo">
+</p>
 
-## Credits & Attribution
-- **Original Author:** [TheSillyDoggo](https://github.com/TheSillyDoggo)
-- **Port Maintainer:** [zPAB](https://github.com/zPAB)
+<p align="center">
+  <strong>El mod menú de calidad de vida y utilidades definitivo para Geometry Dash (Android & PC).</strong>
+</p>
 
-All original features, logic, and assets are credited to TheSillyDoggo and upstream contributors. This repository exists to maintain compatibility with modern Geode versions.
+---
 
-## Changes in this Port
-- Updated build configuration for Geode SDK v6.0.0-beta.2.
-- Updated codegen and bindings for Geometry Dash 2.2091.
-- Fixed asset packaging and removed obsolete dependencies.
-- Multiplatform builds for Windows, Android 32/64-bit, macOS, and iOS.
+## 👑 Desarrollado por
+- **Creador y Mantenedor:** [zPAB](https://github.com/zPAB)
 
-## Usage
-- **PC:** Press `Tab` to toggle the menu.
-- **Mobile:** Tap the on-screen floating ball.
+---
 
-## Building
-Requires [Geode CLI](https://github.com/geode-sdk/cli) and CMake 3.25+.
+## 🕹️ Funcionalidades
+- **Práctica Pro:** StartPos Switcher, Hitboxes precisas, Noclip Accuracy.
+- **Velocidad:** Speedhack fluido asignable a atajos.
+- **Visuales:** Solid Wave Trail, ocultar partículas y efectos innecesarios.
+- **Editor:** Bypasses de zoom, límites y verificación.
+- **Android Ready:** Compatible con pantalla táctil y Geode Launcher.
+
+## 📱 Instalación
+Descarga el archivo `.geode` desde la sección de **Releases** y cópialo en tu carpeta de `geode/mods/`.

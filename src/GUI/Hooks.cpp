@@ -12,7 +12,7 @@ bool BallMenuLayer::init()
     {
         Loader::get()->queueInMainThread([this]
         {
-            FLAlertLayer::create("QOLMod", "Geode <cr>failed</c> to extract assets <cl>required</c> for <co>QOLMod</c> to function.\nIt is <cc>recommended</c> that you <cl>reinstall</c> <co>QOLMod</c> to avoid <cr>crashes</c>", "OK")->show();
+            FLAlertLayer::create("JPMenu", "Geode <cr>failed</c> to extract assets <cl>required</c> for <co>JPMenu</c> to function.\nIt is <cc>recommended</c> that you <cl>reinstall</c> <co>JPMenu</c> to avoid <cr>crashes</c>", "OK")->show();
         });
     }
 
