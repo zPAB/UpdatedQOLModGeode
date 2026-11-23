@@ -91,10 +91,15 @@ class $modify (StartposPlayLayer, PlayLayer)
         PlayLayer::createObjectsFromSetupFinished();
 
         m_fields->ui = StartposSwitcherUI::create(this);
-        StartposSwitcherLayout::get()->applyToNode(m_fields->ui);
+        if (m_fields->ui)
+        {
+            StartposSwitcherLayout::get()->applyToNode(m_fields->ui);
 
-        if (m_uiLayer)
-            m_uiLayer->addChild(m_fields->ui);
+            if (m_uiLayer)
+                m_uiLayer->addChild(m_fields->ui);
+            else
+                this->addChild(m_fields->ui, 100);
+        }
     }
 
     void postUpdate(float p0)

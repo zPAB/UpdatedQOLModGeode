@@ -71,8 +71,11 @@ bool StartposSwitcherUI::init()
 
 void StartposSwitcherUI::onSwitchBtn(CCObject* sender)
 {
+    if (!gameLayer || !gameLayer->m_startPosObjects || gameLayer->m_startPosObjects->count() == 0)
+        return;
+
     CCObject* newObj = nullptr;
-    int index = gameLayer->m_startPosObjects->indexOfObject(gameLayer->m_startPosObject);
+    int index = gameLayer->m_startPosObject ? (int)gameLayer->m_startPosObjects->indexOfObject(gameLayer->m_startPosObject) : -1;
 
     switch (sender->getTag())
     {
@@ -83,7 +86,7 @@ void StartposSwitcherUI::onSwitchBtn(CCObject* sender)
             {
                 if (gameLayer->m_startPosObject == gameLayer->m_startPosObjects->firstObject())
                     newObj = nullptr;
-                else
+                else if (index > 0)
                     newObj = gameLayer->m_startPosObjects->objectAtIndex(index - 1);
             }
             break;
@@ -95,7 +98,7 @@ void StartposSwitcherUI::onSwitchBtn(CCObject* sender)
             {
                 if (gameLayer->m_startPosObject == gameLayer->m_startPosObjects->lastObject())
                     newObj = nullptr;
-                else
+                else if (index >= 0 && index + 1 < (int)gameLayer->m_startPosObjects->count())
                     newObj = gameLayer->m_startPosObjects->objectAtIndex(index + 1);
             }
             break;
@@ -146,17 +149,26 @@ float StartposSwitcherUI::getPercentForObject(GameObject* go)
 void StartposSwitcherUI::updateUI()
 {
     updateDisplayedOpacity(std::lerp<double>(regularOpacity, 1.0f, opacityMode) * 255);
-    if (!updatingEnabled)
+    if (!updatingEnabled || !gameLayer || !gameLayer->m_startPosObjects || gameLayer->m_startPosObjects->count() == 0)
     {
         leftPercent->setString("");
         rightPercent->setString("");
-        label->setString("6 / 7");
+        label->setString("0 / 0");
+        nameLabel->setString("");
+        nameLabel->setVisible(false);
         return;
     }
 
-    uint16_t cur = gameLayer->m_startPosObject ? (gameLayer->m_startPosObjects->indexOfObject(gameLayer->m_startPosObject) + 1) : 0;
+    unsigned int count = gameLayer->m_startPosObjects->count();
+    unsigned int cur = 0;
+    if (gameLayer->m_startPosObject)
+    {
+        unsigned int idx = gameLayer->m_startPosObjects->indexOfObject(gameLayer->m_startPosObject);
+        if (idx != UINT_MAX)
+            cur = idx + 1;
+    }
 
-    label->setString(fmt::format("{} / {}", cur, gameLayer->m_startPosObjects->count()).c_str());
+    label->setString(fmt::format("{} / {}", cur, count).c_str());
     label->limitLabelWidth(80, 0.65f, 0);
 
     nameLabel->setVisible(showName);
