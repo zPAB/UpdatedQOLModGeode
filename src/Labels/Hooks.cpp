@@ -6,7 +6,13 @@ bool LabelPlayLayer::init(GJGameLevel* level, bool dontCreateObjects)
     if (!PlayLayer::init(level, dontCreateObjects))
         return false;
 
-    m_uiLayer->addChild(LabelContainerLayer::create());
+    if (auto container = LabelContainerLayer::create())
+    {
+        if (m_uiLayer)
+            m_uiLayer->addChild(container);
+        else
+            this->addChild(container, 100);
+    }
 
     return true;
 }

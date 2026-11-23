@@ -140,11 +140,15 @@ class $modify (PlayLayer)
             return false;
 
         m_fields->tintOverlay = qolmod::LayerColor::create(ccc4(0, 0, 0, 0));
-        m_fields->tintOverlay->setID("noclip-tint-overlay"_spr);
-        // m_fields->tintOverlay->setBlendFunc({GL_ONE_MINUS_DST_COLOR, GL_ONE_MINUS_DST_ALPHA});
-        m_fields->tintOverlay->setZOrder(2);
-        
-        this->insertBefore(m_fields->tintOverlay, m_uiLayer);
+        if (m_fields->tintOverlay)
+        {
+            m_fields->tintOverlay->setID("noclip-tint-overlay"_spr);
+            m_fields->tintOverlay->setZOrder(2);
+            if (m_uiLayer)
+                this->insertBefore(m_fields->tintOverlay, m_uiLayer);
+            else
+                this->addChild(m_fields->tintOverlay, 2);
+        }
         return true;
     }
 

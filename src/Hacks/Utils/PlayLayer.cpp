@@ -13,7 +13,13 @@ bool PlayLayerUtils::init(GJGameLevel* level, bool dontCreateObjects)
         return false;
 
     m_fields->drawNode = CCDrawNode::create();
-    m_objectLayer->addChild(m_fields->drawNode);
+    if (m_fields->drawNode)
+    {
+        if (m_objectLayer)
+            m_objectLayer->addChild(m_fields->drawNode);
+        else
+            this->addChild(m_fields->drawNode);
+    }
 
     return true;
 }
@@ -22,7 +28,8 @@ void PlayLayerUtils::postUpdate(float p0)
 {
     PlayLayer::postUpdate(p0);
 
-    m_fields->drawNode->clear();
+    if (m_fields->drawNode)
+        m_fields->drawNode->clear();
 }
 
 void PlayLayerUtils::addObject(GameObject* obj)

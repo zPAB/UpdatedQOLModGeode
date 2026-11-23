@@ -31,16 +31,16 @@ class $modify (DeathMarkerPlayLayer, PlayLayer)
 
         m_fields->deathPoints.clear();
         m_fields->drawNode = CCDrawNode::create();
-        if (m_objectLayer && m_fields->drawNode)
+        if (m_fields->drawNode)
         {
-            m_objectLayer->addChild(m_fields->drawNode, 100);
+            if (m_objectLayer)
+                m_objectLayer->addChild(m_fields->drawNode, 100);
+            else
+                this->addChild(m_fields->drawNode, 100);
         }
 
         return true;
     }
-
-    virtual void circleWaveWillBeRemoved(CCCircleWave*) {}
-    virtual void dialogClosed(DialogLayer*) {}
 
     void destroyPlayer(PlayerObject* player, GameObject* object)
     {

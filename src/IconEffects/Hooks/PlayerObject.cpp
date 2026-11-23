@@ -25,13 +25,16 @@ class $modify (IconicPlayerObject, PlayerObject)
 
         if (auto gjbgl = GJBaseGameLayer::get())
         {
-            if (auto spr = gjbgl->m_objectLayer->getChildByType<CCSprite>(-1))
+            if (gjbgl->m_objectLayer)
             {
-                if (spr->isFrameDisplayed(CCSpriteFrameCache::get()->spriteFrameByName("spiderDash_002.png")))
+                if (auto spr = gjbgl->m_objectLayer->getChildByType<CCSprite>(-1))
                 {
-                    if (auto iconic = typeinfo_cast<IconicPlayerHook*>(getUserObject("iconic-hook"_spr)))
+                    if (spr->isFrameDisplayed(CCSpriteFrameCache::get()->spriteFrameByName("spiderDash_002.png")))
                     {
-                        iconic->onSpiderTeleport(spr);
+                        if (auto iconic = typeinfo_cast<IconicPlayerHook*>(getUserObject("iconic-hook"_spr)))
+                        {
+                            iconic->onSpiderTeleport(spr);
+                        }
                     }
                 }
             }

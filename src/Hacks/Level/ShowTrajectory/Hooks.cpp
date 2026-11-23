@@ -19,7 +19,13 @@ bool TrajectoryEditor::init(GJGameLevel* level, bool noUI)
     if (!LevelEditorLayer::init(level, noUI))
         return false;
 
-    this->insertBefore(TrajectoryNode::create(), m_uiLayer);
+    if (auto node = TrajectoryNode::create())
+    {
+        if (m_uiLayer)
+            this->insertBefore(node, m_uiLayer);
+        else
+            this->addChild(node, 2);
+    }
     return true;
 }
 
@@ -27,7 +33,13 @@ void TrajectoryPlayLayer::createObjectsFromSetupFinished()
 {
     PlayLayer::createObjectsFromSetupFinished();
 
-    this->insertBefore(TrajectoryNode::create(), m_uiLayer);
+    if (auto node = TrajectoryNode::create())
+    {
+        if (m_uiLayer)
+            this->insertBefore(node, m_uiLayer);
+        else
+            this->addChild(node, 2);
+    }
 }
 
 void TrajectoryPlayLayer::destroyPlayer(PlayerObject* player, GameObject* object)
