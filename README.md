@@ -4,7 +4,7 @@ Unofficial maintenance port of [TheSillyDoggo/GeodeMenu](https://github.com/TheS
 
 ## Credits & Attribution
 - **Original Author:** [TheSillyDoggo](https://github.com/TheSillyDoggo)
-- **Port Maintainer:** [XontTFM](https://github.com/XontTFM)
+- **Port Maintainer:** [zPAB](https://github.com/zPAB)
 
 All original features, logic, and assets are credited to TheSillyDoggo and upstream contributors. This repository exists to maintain compatibility with modern Geode versions.
 

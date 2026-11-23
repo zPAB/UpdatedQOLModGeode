@@ -4,7 +4,7 @@ An unofficial maintenance port of **QOLMod** (originally created by **TheSillyDo
 
 ## Credits & Attribution
 - **Original Developer:** [TheSillyDoggo](https://github.com/TheSillyDoggo) - Original mod architecture, modules, and user interface.
-- **Port Maintainer:** [XontTFM](https://github.com/XontTFM) - Modernized build files, bindings, and dependencies for modern Geode v6.
+- **Port Maintainer:** [zPAB](https://github.com/zPAB) - Modernized build files, bindings, and dependencies for modern Geode v6.
 
 ## About this Port
 The upstream QOLMod repository has been inactive and does not compile on modern Geode v6 due to breaking changes in bindings, SDK macros, and toolchains. This port provides:

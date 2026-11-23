@@ -8,12 +8,12 @@
 		"ios": "2.2091"
 	},
 	"early-load": true,
-	"id": "xonttfm.jpmodgeode",
+	"id": "zpab.updated_qolmod",
 	"name": "QOLMod (v6 Port)",
-	"developer": "TheSillyDoggo, XontTFM",
+	"developer": "TheSillyDoggo, zPAB",
 	"description": "Unofficial port of TheSillyDoggo's QOLMod updated for Geode v6 and Geometry Dash 2.2091.",
 	"links": {
-		"source": "https://github.com/XontTFM/JPModGeode",
+		"source": "https://github.com/zPAB/UpdatedQOLModGeode",
 		"community": "https://github.com/TheSillyDoggo/GeodeMenu"
 	},
 	"resources": {
